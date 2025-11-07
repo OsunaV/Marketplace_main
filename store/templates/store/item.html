@@ -13,7 +13,7 @@
             <h1 class="mb-4 text-center"></h1>
             <hr>
             <h4><strong> Precio ${{ item.price}}</strong></h4>
-            <h4><strong>Vendedor ${{ item.create_by.username }}</strong></h4>
+            <h4><strong>Vendedor {{ item.created_by.username }}</strong></h4>
 
             {% if item.description %}
                 <p>{{ item.description}}</p>
