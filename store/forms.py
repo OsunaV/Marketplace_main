@@ -11,18 +11,13 @@ class LoginForm(AuthenticationForm):
             'class': 'form-control'
         }
     ))
-    password1 = forms.CharField(widget=forms.PasswordInput(
+    password = forms.CharField(widget=forms.PasswordInput(
         attrs={
             'placeholder': 'password',
             'class' : 'form-control'
         }
     ))
-    password2 = forms.CharField(widget=forms.PasswordInput(
-        attrs={
-            'placeholder': 'Repiet password',
-            'class' : 'form-control'
-        }
-    ))
+
 
 class SignupForm(UserCreationForm):
     class Meta:
