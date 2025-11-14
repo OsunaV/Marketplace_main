@@ -2,7 +2,11 @@
 {% block title%} home| {%endblock%}
 {%block content %}
     <div class="mt-2 mb-4 px-4 py-2">
-        <h1 class="text-center mb-4">Nuevos productos</h1>
+        {%if request.user.is_authenticated%}
+            <h1 class="text-center mb-4"> Nuevos productos - {{request.user.username}}</h1>
+        {%else%}
+            <h1 class="text-center mb-4">Nuevos productos</h1>
+        {%endif%}
         <div class="container text-center"></div>
             <div class="row justify-content-center">
                 {%for item in items%}

@@ -36,10 +36,15 @@ def register (request):
             form.save()
             return redirect('login')
         
-        else:
-            form = SignupForm()
+    else:
+        form = SignupForm()
 
-        context = {
-            'form' : form
-        }
+    context = {
+        'form' : form
+    }
     return render(request, 'store/singup.html', context)
+
+def logout_user(request):
+    logout(request)
+
+    return redirect('home')

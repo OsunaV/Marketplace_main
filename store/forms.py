@@ -24,19 +24,19 @@ class SignupForm(UserCreationForm):
         model = User
         fields = ('username','email','password1','password2')
 
-        username = forms.CharField(widget=forms.TextInput(
+    username = forms.CharField(widget=forms.TextInput(
         attrs={
             'placeholder': 'Tu usuario',
             'class': 'form-control'
         }
     ))
-        email = forms.CharField(widget=forms.EmailInput(
+    email = forms.CharField(widget=forms.EmailInput(
         attrs={
             'placeholder': 'Tu email',
             'class': 'form-control'
         }
     ))
-        password1 = forms.CharField(widget=forms.PasswordInput(
+    password1 = forms.CharField(widget=forms.PasswordInput(
         attrs={
             'placeholder': 'password',
             'class' : 'form-control'

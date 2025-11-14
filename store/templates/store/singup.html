@@ -3,7 +3,7 @@
 {%block title%} {{item.name}}Registro | {%endblock%}
 
 {%block content%}
-<div class="row p-4">
+<div class="row p-4 d-flex justify-content-center aling-items-center">
     <div class="col-6 bg-light p-4">
         <h4 class="mb-6 text-center">Registro</h4>
         <hr>
@@ -12,6 +12,10 @@
             <div class="form-floating mb-3">
                 <h6>Username:</h6>
                 {{form.username}}
+            </div>
+            <div class="form-floating mb-3">
+                <h6>email:</h6>
+                {{form.email}}
             </div>
             <div class="form-floating mb-3">
                 <h6>Password:</h6>
@@ -23,11 +27,24 @@
             </div>
 
             {% if form.errors or forms.non_field_errors %}
-                fields.errors
+                <div class="mb-4 p-6 bg-danger rounded">
+                    {% for field in form%}
+                        <h5 class="text-white">
+                            fields.errors
+                        </h5>
+                    {% endfor %}
+                    {{ form.non_field_errors }}
+                </div>
+                
             {% endif %}
-            {{ form.non_field_errors }}
 
-            <button class="btn btn-primary mb-6">Register</button>
+            <div class="d-flex justify-content-center aling-items-center">
+                <button class="btn btn-primary mb-6">Registro</button>
+            </div>
+            <div class="d-flex justify-content-center aling-items-center">
+                <a href="{% url 'login' %}">¿Ya tienes una cuenta? Accesa aqui</a>
+            </div>
+
         </form>
     </div>
 </div>
