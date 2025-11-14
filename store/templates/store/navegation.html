@@ -16,11 +16,6 @@
                         Contac
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{% url 'login' %}" class="nav-link active">
-                        Login
-                    </a>
-                </li>
                 {%if request.user.is_authenticated%}
                 <li class="nav-item">
                     <a href="{%url 'logout'%}" class="nav-link activate">
