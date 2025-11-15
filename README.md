@@ -130,79 +130,98 @@ urlpatterns = [
 ```html
 {% extends 'store/base.html' %}
 
-{% block title %}Login| {% endblock %}
+{%block title%} {{item.name}}Registro | {%endblock%}
 
-{% block content %}
+{%block content%}
+    <div class="row p-4 d-flex justify-content-center aling-items-center">
+        <div class="shadow col-6 bg-#fff p-4 rounded-3">
 
-<div class="row p-4">
-    <div class="col-6 bg-light p-4">
-        <h4 class="mb-6 text-center">Registro</h4>
-        <hr>
-        <form action="." method="POST">
-            {% csrf_token %}
-            <div class="form-floating mb-3">
-                <h6>Username:</h6>
-                {{form.username}}
-            </div>
-            <div class="form-floating mb-3">
-                <h6>Password:</h6>
-                {{form.password}}
-            </div>
-        </form>
+            <h4 class="mb-6 text-center">Login</h4>
+            <hr>
+            <!--Formulario de inicio de sesion-->
+            <form action="." method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Username:</label>
+                    {{form.username}}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Username:</label>
+                    {{form.password}}
+                </div>
+                <!-- Captura de errores -->
+                {% if form.errors or forms.non_field_errors %}
+                    <div class="mb-4 p-6 bg-danger rounded">
+                        {% for fields in form%}
+                            <h5 class="text-white">
+                                {{fields.errors}}
+                            </h5>
+                        {% endfor %}
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+                <!--Boton login y registro-->
+                <div class="d-flex justify-content-center aling-items-center">
+                    <button class="btn btn-primary mb-6">Login</button>
+                    </div>
+                <div class="d-flex justify-content-center aling-items-center">
+                    <a href="{% url 'register' %}">¿No tienes una cuenta? Creala aqui</a>
+                </div>
+                
+            </form>
+            
+        </div>
     </div>
-    {% if form.errors or form.non_field_errors %}
-    <div class="mb-4 p-6 bg-danger">
-        {% for field in form %}
-            fiels.errors
-        {% endfor %}
-        {{ form.non_field_errors }}
-    </div>
-    {% endif %}
-</div>
-<button class="btn btn-primary mb-6">Login</button>
-
-
-{% endblock %}
+{%endblock%}
 ```
 ```html
 {% extends 'store/base.html' %}
 
-{% block title %}Registro| {% endblock %}
+{%block title%} {{item.name}}Registro | {%endblock%}
 
-{% block content %}
-<div class="row p-4">
-    <div class="col-6 bg-light p-4">
+{%block content%}
+<div class="row p-4 d-flex justify-content-center aling-items-center ">
+    <div class="shadow col-6 bg-#fff p-4 rounded-3">
         <h4 class="mb-6 text-center">Registro</h4>
         <hr>
         <form action="." method="POST">
             {% csrf_token %}
-            <div class="form-floating mb-3">
-                <h6>Username:</h6>
+            <div class=" mb-3">
+                <label class="form-label">Username:</label>
                 {{form.username}}
             </div>
-            <div class="form-floating mb-3">
-                <h6>Email:</h6>
+            <div class=" mb-3">
+                <label class="form-label">Email:</label>
                 {{form.email}}
             </div>
-            <div class="form-floating mb-3">
-                <h6>Password:</h6>
+            <div class=" mb-3">
+                <label class="form-label">Password:</label>
                 {{form.password1}}
             </div>
-            <div class="form-floating mb-3">
-                <h6>Repite Password:</h6>
+            <div class=" mb-3">
+                <label class="form-label">Repite Password:</label>
                 {{form.password2}}
             </div>
 
-            {% if form.errors or form.non_field_errors %}
-                <div class="mb-4 p-6 bg-danger">
-                    {% for field in form %}
-                        fields.errors
+            {% if form.errors or forms.non_field_errors %}
+                <div class="mb-4 p-6 bg-danger rounded">
+                    {% for field in form%}
+                        <h5 class="text-white">
+                            fields.errors
+                        </h5>
                     {% endfor %}
                     {{ form.non_field_errors }}
                 </div>
+                
             {% endif %}
 
-            <button class="btn btn-primary mb-6">Register</button>
+            <div class="d-flex justify-content-center aling-items-center">
+                <button class="btn btn-primary mb-6">Registro</button>
+            </div>
+            <div class="d-flex justify-content-center aling-items-center">
+                <a href="{% url 'login' %}">¿Ya tienes una cuenta? Accesa aqui</a>
+            </div>
+
         </form>
     </div>
 </div>
