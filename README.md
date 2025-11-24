@@ -227,3 +227,158 @@ urlpatterns = [
 </div>
 {% endblock %}
 ```
+
+# Funcionalidad para que el usuario agregue articulos en la aplicacion siempre y cuando tenga acceso a la aplicacion store, estos son los pasos:
+1.actualice el archivo forms.py a el final del archivo
+```py
+class NewItemForm(forms.ModelForm):
+    class Meta:
+        model = Item
+        fields = ('category', 'name', 'description', 'price', 'image',)
+
+        widgets = {
+            'category': forms.Select(attrs={
+                'class': 'form-select'
+            }),
+            'name': forms.TextInput(attrs={
+                'class': 'form-control'
+            }),
+            'description': forms.Textarea(attrs={
+                'class': 'form-control',
+                'style': 'height: 100px'
+            }),
+            'price': forms.TextInput(attrs={
+                'class': 'form-control',
+            }),
+            'price': forms.TextInput(attrs={
+                'class': 'form-control',
+            }),
+            'image': forms.FileInput(attrs={
+                'class': 'form-control',
+            }),
+        }
+```
+2.Actualice el archivo views.py con la siguiente linea de codigo para el decorador en la linea 2 de su codigo.
+```py 
+
+from django.contrib.auth.decorators import login_required
+```
+
+3.En el mismo archivo views.py ponga la siguiente funcion a el final del archivo
+```py
+@login_required
+def add_item(request):
+    if request.method == 'POST':
+        form = NewItemForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            item = form.save(commit=False)
+            item.created_by = request.user
+            item.save()
+
+            return redirect('detail', pk=item.id)
+    else:
+        form = NewItemForm()
+        context = {
+            'form': form,
+            'title': 'New Item'
+        }
+
+    return render(request, 'store/form.html', context)
+```
+4.Cree un archivo en 'templates/store' llamado form.html y agregue el siguiente codigo:
+```html
+
+{% extends 'store/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content%}
+    <h4 class="mb-4 mt-4">{{ title }}</h4>
+    <hr>
+    <form action="." method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+        
+            {{ form.as_p }}
+        </div>
+
+        {% if form.errors or form.non_field_errors %}
+            <div class="mb-4 p-6 bg-danger">
+                {% for field in form %}
+                    {{ field.errors }}
+                {% endfor %}
+
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        <button class="btn btn-primary mb-6">Register</button>
+    </form>
+{% endblock%}
+```
+5.Actualice el archivo urls.py en la aplicacion store con la siguiente ruta:
+```py
+from django.urls import path
+from django.contrib.auth import views as auth_views
+from .views import contact, detail, register, logout_user, add_item
+
+from .forms import LoginForm
+
+urlpatterns = [
+    path('contact/', contact, name='contact'),
+    path('register/', register, name='register'),
+    path('login/', auth_views.LoginView.as_view(template_name='store/login.html', authentication_form=LoginForm), name='login'),
+    path('logout/', logout_user, name='logout'),
+    path('add_item/', add_item, name='add_item'),
+    path('detail/<int:pk>/', detail, name='detail'),
+]
+```
+6.Actualice el archivo navigation.html para que el usuario pueda navegar a la forma de agregar articulo
+```html
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a href="{% url 'home' %}" class="navbar-brand">Marketplace</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-control="navBarNav" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="" class="nav-link active">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" class="nav-link active">
+                        Contact
+                    </a>
+                </li>
+               
+                {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_item'%}">Add Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'logout' %}" class="nav-link active">
+                            Logout
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'login' %}" class="nav-link active">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'register' %}" class="nav-link active">
+                            Register
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+```
+
