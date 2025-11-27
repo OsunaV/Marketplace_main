@@ -1,39 +1,23 @@
 #                                     Documentacion completa(Desde Primer Parcial al Tercer Parcial)(27/11/25)
 
 # Índice de Documentación Django (27/11/25)
-Introducción
-
-Explicación de comando
-
-Diagrama MVT
-
-Explicación de archivos y comandos
-
-settings.py
-
-urls.py
-
-models.py
-
-views.py
-
-Folder templates/store
-
-Ejecucion del proyecto
-
-Actualizaciones del Tercer Parcial
-
-Forms.py
-
-Views.py
-
-Login / Register urls.py
-
-Templates
-
-Conclusión
-
-
+- [Introducción](#introducción)
+- [Explicación de comando](#explicación-de-comando)
+- [Diagrama MVT](#diagrama-mvt)
+- [Explicación de archivos y comandos](#explicación-de-archivos-y-comandos)
+  - [settigs.py](#settigspy)
+  - [urls.py](#urlspy)
+  - [models.py](#modelspy)
+  - [views.py](#viewspy)
+  - [foder templates/store](#foder-templatesstore)
+- [Ejecucion del proyecto](#ejecucion-del-proyecto)
+- [Actualizaciones Del Tercera Parcial](#actualizaciones-del-tercera-parcial)
+  - [Forms.py](#formspy-loginform-signupform-newitemform)
+  - [Views.py](#viewspy-login-logout_user-detail-add_item)
+  - [Login, Register urls.py](#login-register-urlspy)
+  - [Templates store](#storetemplates-itemhtml-loginhtml-signuphtml-navigationhtml-formhtml)
+- [Conclusión](#conclusión)
+  
 # Introducción
 
 **Django** es un framework de desarrollo web de código abierto escrito en **Python**, diseñado para facilitar la creación de aplicaciones web rápidas y eficientes.
