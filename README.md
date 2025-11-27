@@ -1,24 +1,37 @@
 #                                     Documentacion completa(Desde Primer Parcial al Tercer Parcial)(27/11/25)
 
 # Índice de Documentación Django (27/11/25)
-1. [Introducción](#introducción)
+Introducción
 
+Explicación de comando
 
-2. [Explicación de comando](#explicación-de-comandos)
-  
+Diagrama MVT
 
-3. [Diagrama MVT](#diagrama-mvt)
+Explicación de archivos y comandos
 
+settings.py
 
-4. [Explicación de archivos y comandos](#explicación-de-archivos-y-comandos)
+urls.py
 
-5. [foder templates/store.](#foder-templac/store)
+models.py
 
+views.py
 
-6. [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
+Folder templates/store
 
+Ejecucion del proyecto
 
-7. [Conclusión](#conclusión)
+Actualizaciones del Tercer Parcial
+
+Forms.py
+
+Views.py
+
+Login / Register urls.py
+
+Templates
+
+Conclusión
 
 
 # Introducción
