@@ -1,4 +1,62 @@
 #                                     Documentacion completa(Desde Primer Parcial al Tercer Parcial)(27/11/25)
+
+# Índice de Documentación Django (27/11/25)
+1. [Introducción](#introducción)
+   - [Qué es Django](#qué-es-django)
+   - [Ventajas de usar Django](#ventajas-de-usar-django)
+   - [Seguridad en Django](#seguridad-en-django)
+   - [Sistema ORM y administración](#sistema-orm-y-administración)
+   - [Patrón MVT](#patrón-mvt)
+
+2. [Explicación de comandos](#explicación-de-comandos)
+   - [Activar entorno virtual](#activar-entorno-virtual-venvscriptsactivate)
+   - [Instalar Django](#instalar-django-pip-install-django)
+   - [Crear proyecto Django](#crear-proyecto-django-django-admin-startproject-marketplace_main)
+   - [Crear entorno virtual](#crear-entorno-virtual-python-m-venv-venv)
+   - [Ver paquetes instalados](#ver-paquetes-instalados-pip-list)
+   - [Listar archivos](#listar-archivos-dir)
+   - [Ejecutar servidor de desarrollo](#ejecutar-servidor-de-desarrollo-python-manage-py-runserver)
+   - [Abrir VS Code](#abrir-vs-code-code-)
+   - [Crear superusuario](#crear-superusuario-python-manage-py-createsuperuser)
+   - [Aplicar migraciones](#aplicar-migraciones-python-manage-py-migrate)
+   - [Crear aplicación](#crear-aplicación-python-manage-py-startapp-store)
+   - [Generar migraciones](#generar-migraciones-python-manage-py-makemigrations)
+   - [Aplicar migraciones](#aplicar-migraciones-python-manage-py-migrate-1)
+
+3. [Diagrama MVT](#diagrama-mvt)
+   - [Solicitud del cliente](#solicitud-del-cliente)
+   - [Enrutamiento URL](#enrutamiento-url)
+   - [Vistas (Views)](#vistas-views)
+   - [Modelos (Models)](#modelos-models)
+   - [Base de datos](#base-de-datos)
+   - [Plantillas (Templates)](#plantillas-templates)
+   - [Respuesta al cliente](#respuesta-al-cliente)
+
+4. [Explicación de archivos y configuración](#explicación-de-archivos-y-configuración)
+   - [`settings.py`](#settingspy)
+   - [`urls.py`](#urlspy)
+   - [`models.py`](#modelspy)
+   - [`views.py`](#viewspy)
+   - [`forms.py`](#formspy)
+   - [`templates/store/`](#templatesstore)
+
+5. [Ejecución del proyecto](#ejecución-del-proyecto)
+   - [Visualización de items en la web](#visualización-de-items-en-la-web)
+   - [Sección de contacto](#sección-de-contacto)
+   - [Uso del panel de administración de Django](#uso-del-panel-de-administración-de-django)
+
+6. [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
+   - [Nuevos formularios (`forms.py`)](#nuevos-formularios-formspy)
+   - [Funciones actualizadas en `views.py`](#funciones-actualizadas-en-viewspy)
+   - [Decorador `@login_required`](#decorador-login_required)
+   - [Rutas nuevas en `urls.py`](#rutas-nuevas-en-urlspy)
+   - [Plantillas para login y registro](#plantillas-para-login-y-registro)
+
+7. [Conclusión](#conclusión)
+   - [Resumen de la implementación](#resumen-de-la-implementación)
+   - [Observaciones sobre vistas, rutas, formularios y plantillas](#observaciones-sobre-vistas-rutas-formularios-y-plantillas)
+   - [Recomendaciones de mejoras](#recomendaciones-de-mejoras)
+
 # Introducción
 
 **Django** es un framework de desarrollo web de código abierto escrito en **Python**, diseñado para facilitar la creación de aplicaciones web rápidas y eficientes.
