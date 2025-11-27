@@ -12,9 +12,9 @@
   - [foder templates/store](#foder-templatesstore)
 - [Ejecucion del proyecto](#ejecucion-del-proyecto)
 - [Actualizaciones Del Tercera Parcial](#actualizaciones-del-tercera-parcial)
-  - [Forms.py](#forms.py-loginform-signupform-newitemform)
-  - [Views.py](#viewspy-login-logout_user-detail-add_item)
-  - [Templates store](#storetemplates-itemhtml-loginhtml-signuphtml-navigationhtml-formhtml)
+- [Forms.py](#formspy-loginform-signupform-newitemform)
+- [Views.py](#viewspy-login-logout_user-detail-add_item)
+- [Templates store](#storetemplates-itemhtml-loginhtml-signuphtml-navigationhtml-formhtml)
 - [Conclusión](#conclusión)
   
 # Introducción
