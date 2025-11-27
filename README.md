@@ -4,15 +4,15 @@
 1. [Introducción](#introducción)
 
 
-2. [Explicación de comandos](#explicación-de-comandos)
+2. [Explicación de comando](#explicación-de-comandos)
   
 
 3. [Diagrama MVT](#diagrama-mvt)
 
 
-4. [Explicación de archivos y configuración](#explicación-de-archivos-y-configuración)
+4. [Explicación de archivos y comandos](#explicación-de-archivos-y-comandos)
 
-5. [Ejecución del proyecto](#ejecución-del-proyecto)
+5. [foder templates/store.](#foder-templac/store)
 
 
 6. [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
