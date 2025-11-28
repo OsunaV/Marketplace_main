@@ -378,7 +378,7 @@ Capturas del "Django administraction para crear las tablas/apartados
 
 # Actualizaciones Del Tercera Parcial 
 Forms.py (LoginForm, SignupForm, NewItemForm)
-#Forms.py
+# SignUp y Login en Forms.py
 ```python
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -444,7 +444,7 @@ class SignupForm(UserCreationForm):
 ```
 
 Views.py (login(), logout_user(), detail(), add_item())
-#Views.py
+# Funciones en views.py
 ```python
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import logout
@@ -553,7 +553,7 @@ urlpatterns = [
 
 
 store/templates (item.html, login.html, signup.html, navigation.html, form.html)
-#Templates store
+# Templates templates/store login, signup
 ```html
 {% extends 'store/base.html' %}
 
