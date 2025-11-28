@@ -1,6 +1,5 @@
 #Documentacion Del Primer Parcial A Tercer Parcial (27/11/25)
 # Índice
-# Índice
 
 1. [Introducción](#introducción)
 2. [Explicación de comando](#explicación-de-comando)
