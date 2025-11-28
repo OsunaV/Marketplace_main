@@ -2,40 +2,39 @@
 # Índice
 
 ## Explicación de comando
-- venv\Scripts\activate
-- pip install django
-- django-admin startproject marketplace_main
-- python -m venv venv
-- pip list
-- dir
-- python manage.py runserver
-- code .
-- python manage.py createsuperuser
-- python manage.py migrate
-- python manage.py startapp store
-- python manage.py makemigrations
-- python manage.py migrate (segunda vez)
+- [venv\Scripts\activate](#venvscriptsactivate)
+- [pip install django](#pip-install-django)
+- [django-admin startproject marketplace_main](#django-admin-startproject-marketplace_main)
+- [python -m venv venv](#python--m-venv-venv)
+- [pip list](#pip-list)
+- [dir](#dir)
+- [python manage.py runserver](#python-manage-py-runserver)
+- [code .](#code-)
+- [python manage.py createsuperuser](#python-manage-py-createsuperuser)
+- [python manage.py migrate](#python-manage-py-migrate)
+- [python manage.py startapp store](#python-manage-py-startapp-store)
+- [python manage.py makemigrations](#python-manage-py-makemigrations)
 
 ## Explicación de archivos y comandos
-- settings.py
-- urls.py
-- models.py
-- views.py
-- Folder templates/store
+- [settings.py](#settingspy)
+- [urls.py](#urlspy)
+- [models.py](#modelspy)
+- [views.py](#viewspy)
+- [Folder templates/store](#folder-templatesstore)
 
 ## Actualizaciones del Tercera Parcial
-- SignUp y Login en Forms.py
-- Funciones en views.py
+- [SignUp y Login en Forms.py](#signup-y-login-en-formspy)
+- [Funciones en views.py](#funciones-en-viewspy)
 
 ## Login, Register urls.py
-- Rutas de Login y Registro
+- [Rutas de Login y Registro](#rutas-de-login-y-registro)
 
-## store/templates (item.html, login.html, signup.html, navigation.html, form.html)
-- login.html
-- signup.html
-- item.html
-- navigation.html
-- form.html
+## store/templates
+- [login.html](#loginihtml)
+- [signup.html](#signupihtml)
+- [item.html](#itemihtml)
+- [navigation.html](#navigationihtml)
+- [form.html](#formihtml)
 
 
 # Introducción
