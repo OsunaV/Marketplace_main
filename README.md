@@ -1,4 +1,5 @@
-# Índice de Documentación Django (27/11/25)
+#Documentacion Primer Parcial a Tercer Parcial (27/11/25)
+#Indice
 - [Introducción](#introducción)
 - [Explicación de comando](#explicación-de-comando)
 - [Diagrama MVT](#diagrama-mvt)
