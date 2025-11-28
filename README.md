@@ -1,4 +1,3 @@
-#                                     Documentacion completa(Desde Primer Parcial al Tercer Parcial)(27/11/25)
 - [Introducción](#introducción)
 - [Explicación de comando](#explicación-de-comando)
 - [Diagrama MVT](#diagrama-mvt)
@@ -667,6 +666,9 @@ Formularios (forms.py): El uso de formularios personalizados como LoginForm y Si
 
 Vistas (views.py): La vista register() permite registrar nuevos usuarios, validando los datos del formulario y redirigiendo a la página de login si el registro es exitoso. Por otro lado, la vista detail() gestiona la visualización de detalles de un producto y sugiere productos relacionados. Sin embargo, sería conveniente agregar un decorador @login_required en vistas que deben estar restringidas a usuarios autenticados.
 
+Rutas (urls.py): Las rutas están bien definidas para las páginas de login, registro y detalles de productos. El uso de auth_views.LoginView permite gestionar el login de manera eficiente, pero sería ideal agregar más rutas si se implementan más vistas, como la de agregar productos.
+
+Plantillas (login.html, signup.html, etc.): Las plantillas extendiendo de base.html aseguran que el diseño sea coherente a través de las páginas. Aunque el código es sólido, se debe corregir la forma en que se muestran los errores en los formularios para una experiencia de usuario más clara.
 Rutas (urls.py): Las rutas están bien definidas para las páginas de login, registro y detalles de productos. El uso de auth_views.LoginView permite gestionar el login de manera eficiente, pero sería ideal agregar más rutas si se implementan más vistas, como la de agregar productos.
 
 Plantillas (login.html, signup.html, etc.): Las plantillas extendiendo de base.html aseguran que el diseño sea coherente a través de las páginas. Aunque el código es sólido, se debe corregir la forma en que se muestran los errores en los formularios para una experiencia de usuario más clara.
