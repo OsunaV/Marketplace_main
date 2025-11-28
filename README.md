@@ -378,7 +378,7 @@ Capturas del "Django administraction para crear las tablas/apartados
 
 # Actualizaciones del Tercer Parcial
 Forms.py (LoginForm, SignupForm, NewItemForm)
-# SignUp y Login en Forms.py
+# Forms.py
 ```python
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
