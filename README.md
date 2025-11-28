@@ -376,7 +376,7 @@ Se muestran los items de la pagina web
 Tambien se muestra la parte del "Contactanos"
 Capturas del "Django administraction para crear las tablas/apartados
 
-# Actualizaciones Del Tercera Parcial 
+# Actualizaciones del Tercer Parcial
 Forms.py (LoginForm, SignupForm, NewItemForm)
 # SignUp y Login en Forms.py
 ```python
