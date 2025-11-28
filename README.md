@@ -1,5 +1,6 @@
 #Documentacion Del Primer Parcial A Tercer Parcial (27/11/25)
 # Índice
+# Índice
 
 1. [Introducción](#introducción)
 2. [Explicación de comando](#explicación-de-comando)
@@ -25,12 +26,12 @@
    5. [folder templates/store](#folder-templatesstore)
 5. [Ejecución del proyecto](#ejecución-del-proyecto)
 6. [Actualizaciones del Tercera Parcial](#actualizaciones-del-tercera-parcial)
-   1. [Forms.py (LoginForm, SignupForm, NewItemForm)](#formspy-loginform-signupform-newitemform)
-   2. [Views.py (login(), logout_user(), detail(), add_item())](#viewspy-login-logout_user-detail-add_item)
-7. [Explicar decorador @login_required](#explicar-decorador-login_required)
-8. [Login, Register urls.py](#login-register-urlspy)
-9. [store/templates (item.html, login.html, signup.html, navigation.html, form.html)](#storetemplates-itemhtml-loginihtml-signuphtml-navigationhtml-formhtml)
-10. [Conclusión](#conclusión)
+   1. [SignUp y Login en Forms.py](#signup-y-login-en-formspy)
+   2. [Funciones en views.py](#funciones-en-viewspy)
+7. [Login, Register urls.py](#login-register-urlspy)
+8. [Conclusión](#conclusión)
+
+
 # Introducción
 
 **Django** es un framework de desarrollo web de código abierto escrito en **Python**, diseñado para facilitar la creación de aplicaciones web rápidas y eficientes.
