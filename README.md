@@ -371,7 +371,7 @@ Es la carpeta que almacena todas las páginas html
   <>item.html
   <>navegation.html
 
-# Ejecucion del proyecto
+# Ejecución del proyecto
 Se muestran los items de la pagina web
 Tambien se muestra la parte del "Contactanos"
 Capturas del "Django administraction para crear las tablas/apartados
