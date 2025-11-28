@@ -1,42 +1,22 @@
 #Documentacion Del Primer Parcial A Tercer Parcial (27/11/25)
 # Índice
+- [Introducción](#introducción)
+- [Explicación de comando](#explicación-de-comando)
+- [Diagrama MVT](#diagrama-mvt)
+- [Explicación de archivos y comandos](#explicación-de-archivos-y-comandos)
+  - [settings.py](#settingspy)
+  - [urls.py](#urlspy)
+  - [models.py](#modelspy)
+  - [views.py](#viewspy)
+  - [Folder templates/store](#folder-templatesstore)
+- [Ejecución del proyecto](#ejecución-del-proyecto)
+- [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
+- [Forms.py](#forms-py)
+- [Views.py](#views-py)
+- [Templates store](#templates-store)
+- [Conclusión](#conclusión)
 
-## Explicación de comando
-- [venv\Scripts\activate](#venvscriptsactivate)
-- [pip install django](#pip-install-django)
-- [django-admin startproject marketplace_main](#django-admin-startproject-marketplace_main)
-- [python -m venv venv](#python--m-venv-venv)
-- [pip list](#pip-list)
-- [dir](#dir)
-- [python manage.py runserver](#python-manage-py-runserver)
-- [code .](#code-)
-- [python manage.py createsuperuser](#python-manage-py-createsuperuser)
-- [python manage.py migrate](#python-manage-py-migrate)
-- [python manage.py startapp store](#python-manage-py-startapp-store)
-- [python manage.py makemigrations](#python-manage-py-makemigrations)
-
-## Explicación de archivos y comandos
-- [settings.py](#settingspy)
-- [urls.py](#urlspy)
-- [models.py](#modelspy)
-- [views.py](#viewspy)
-- [Folder templates/store](#folder-templatesstore)
-
-## Actualizaciones del Tercera Parcial
-- [SignUp y Login en Forms.py](#signup-y-login-en-formspy)
-- [Funciones en views.py](#funciones-en-viewspy)
-
-## Login, Register urls.py
-- [Rutas de Login y Registro](#rutas-de-login-y-registro)
-
-## store/templates
-- [login.html](#loginihtml)
-- [signup.html](#signupihtml)
-- [item.html](#itemihtml)
-- [navigation.html](#navigationihtml)
-- [form.html](#formihtml)
-
-
+  
 # Introducción
 
 **Django** es un framework de desarrollo web de código abierto escrito en **Python**, diseñado para facilitar la creación de aplicaciones web rápidas y eficientes.
