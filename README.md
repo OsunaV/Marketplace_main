@@ -1,4 +1,36 @@
-  
+#Documentacion Del Primer Parcial A Tercer Parcial (27/11/25)
+# Índice
+
+1. [Introducción](#introducción)
+2. [Explicación de comando](#explicación-de-comando)
+   1. [venv\Scripts\activate](#venvscriptsactivate)
+   2. [pip install django](#pip-install-django)
+   3. [django-admin startproject marketplace_main](#django-admin-startproject-marketplace_main)
+   4. [python -m venv venv](#python---m-venv-venv)
+   5. [pip list](#pip-list)
+   6. [dir](#dir)
+   7. [python manage.py runserver](#python-managepy-runserver)
+   8. [code .](#code-)
+   9. [python manage.py createsuperuser](#python-managepy-createsuperuser)
+   10. [python manage.py migrate](#python-managepy-migrate)
+   11. [python manage.py startapp store](#python-managepy-startapp-store)
+   12. [python manage.py makemigrations](#python-managepy-makemigrations)
+   13. [python manage.py migrate](#python-managepy-migrate-1)
+3. [Diagrama MVT](#diagrama-mvt)
+4. [Explicación de archivos y comandos](#explicación-de-archivos-y-comandos)
+   1. [settings.py](#settingspy)
+   2. [urls.py](#urlspy)
+   3. [models.py](#modelspy)
+   4. [views.py](#viewspy)
+   5. [folder templates/store](#folder-templatesstore)
+5. [Ejecución del proyecto](#ejecución-del-proyecto)
+6. [Actualizaciones del Tercera Parcial](#actualizaciones-del-tercera-parcial)
+   1. [Forms.py (LoginForm, SignupForm, NewItemForm)](#formspy-loginform-signupform-newitemform)
+   2. [Views.py (login(), logout_user(), detail(), add_item())](#viewspy-login-logout_user-detail-add_item)
+7. [Explicar decorador @login_required](#explicar-decorador-login_required)
+8. [Login, Register urls.py](#login-register-urlspy)
+9. [store/templates (item.html, login.html, signup.html, navigation.html, form.html)](#storetemplates-itemhtml-loginihtml-signuphtml-navigationhtml-formhtml)
+10. [Conclusión](#conclusión)
 # Introducción
 
 **Django** es un framework de desarrollo web de código abierto escrito en **Python**, diseñado para facilitar la creación de aplicaciones web rápidas y eficientes.
