@@ -1,24 +1,20 @@
-#Documentacion Completa (Primer Parcial a Tercer Parcial)
-# Documentación completa (Desde Primer Parcial al Tercer Parcial) (27/11/25)
-
+# Índice de Documentación Django (27/11/25)
 - [Introducción](#introducción)
-- [Explicación de comandos](#explicación-de-comandos)
+- [Explicación de comando](#explicación-de-comando)
 - [Diagrama MVT](#diagrama-mvt)
 - [Explicación de archivos y comandos](#explicación-de-archivos-y-comandos)
-  - [settings.py](#settingspy)
+  - [settigs.py](#settigspy)
   - [urls.py](#urlspy)
   - [models.py](#modelspy)
   - [views.py](#viewspy)
-  - [folder templates/store](#folder-templatesstore)
-- [Ejecución del proyecto](#ejecución-del-proyecto)
-- [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
-  - [Forms.py (LoginForm, SignupForm, NewItemForm)](#forms-py-loginform-signupform-newitemform)
-  - [Views.py (login, logout\_user, detail, add\_item)](#views-py-login-logout_user-detail-add_item)
-  - [Templates store (item.html, login.html, signup.html, navigation.html, form.html)](#templates-store-itemhtml-loginhtml-signuphtml-navigationhtml-formhtml)
+  - [foder templates/store](#foder-templatesstore)
+- [Ejecucion del proyecto](#ejecucion-del-proyecto)
+- [Actualizaciones Del Tercera Parcial](#actualizaciones-del-tercera-parcial)
+- [Forms.py](#formspy-loginform-signupform-newitemform)
+- [Views.py](#viewspy-login-logout_user-detail-add_item)
+- [Templates store](#storetemplates-itemhtml-loginhtml-signuphtml-navigationhtml-formhtml)
 - [Conclusión](#conclusión)
   
----
-
 # Introducción
 
 **Django** es un framework de desarrollo web de código abierto escrito en **Python**, diseñado para facilitar la creación de aplicaciones web rápidas y eficientes.
@@ -30,55 +26,50 @@ Su sistema de **Object-Relational Mapping (ORM)** permite interactuar con bases 
 Además, Django ofrece una **interfaz administrativa preconfigurada**, que facilita la gestión de los datos de la aplicación durante el desarrollo.
 Con su patrón de diseño **Model-Template-View (MTV)**, Django organiza el código de manera modular, promoviendo buenas prácticas de desarrollo y facilitando el mantenimiento a largo plazo.
 
----
-
-# Explicación de comandos
-
-1) venv\Scripts\activate  
+# Explicación de comando
+1)venv\Scripts\activate  
 Este comando activa el entorno virtual de Python en sistemas Windows. El entorno virtual es un espacio aislado donde puedes instalar y gestionar paquetes de Python sin que afecten a otras aplicaciones o proyectos. Esto es útil para evitar conflictos de dependencias entre diferentes proyectos.
 
-2) pip install django  
+2)pip install django  
 Este comando instala Django en el entorno virtual. Al ejecutarlo, se descarga e instala el framework Django y sus dependencias, lo que te permite comenzar a desarrollar aplicaciones web con Django en ese entorno específico.
 
-3) django-admin startproject marketplace_main.  
+3)django-admin startproject marketplace_main.  
 Con este comando, se crea un nuevo proyecto de Django llamado marketplace_main. Este comando genera automáticamente una estructura de directorios con los archivos necesarios para empezar a trabajar en la aplicación web, como settings.py, urls.py, y wsgi.py.
 
-4) python -m venv venv  
+4)python -m venv venv  
 Este comando crea un nuevo entorno virtual llamado venv dentro del directorio actual. Un entorno virtual es una herramienta clave para manejar dependencias de manera aislada, permitiendo que cada proyecto tenga sus propias bibliotecas y versiones sin interferir con otros proyectos.
 
-5) pip list  
+5)pip list  
 Este comando muestra una lista de todos los paquetes instalados en el entorno virtual actual. Es útil para verificar qué bibliotecas y versiones tienes instaladas, permitiendo saber si Django o cualquier otra dependencia está correctamente instalada.
 
-6) dir  
+6)dir  
 Este comando, que se utiliza en sistemas Windows, muestra una lista de archivos y carpetas dentro del directorio actual. Es útil para verificar la estructura de tu proyecto o para navegar por los archivos sin tener que abrir el explorador de archivos.
 
-7) python manage.py runserver  
+7)python manage.py runserver  
 Este comando inicia el servidor de desarrollo de Django, lo que te permite ver tu aplicación web en un navegador local (normalmente en localhost:8000). Es esencial para probar y desarrollar la aplicación de manera interactiva.
 
-8) code .  
+8)code .  
 Este comando abre el directorio actual en Visual Studio Code, si tienes este editor de código instalado. Es un atajo práctico para comenzar a trabajar en tu proyecto sin necesidad de buscarlo manualmente desde el editor.
 
-9) python manage.py createsuperuser  
+9)python manage.py createsuperuser  
 Este comando crea un superusuario (administrador) para tu aplicación Django. El superusuario te permite acceder al panel de administración de Django, donde podrás gestionar la base de datos, los usuarios y otros aspectos del proyecto de manera visual y fácil de usar.
 
-10) python manage.py migrate  
+10)python manage.py migrate  
 El comando migrate aplica todas las migraciones pendientes a la base de datos. Las migraciones son un sistema de Django para gestionar cambios en los modelos, como agregar campos o crear nuevas tablas, y este comando asegura que la base de datos esté sincronizada con el código de los modelos.
 
-11) python manage.py startapp store  
+11)python manage.py startapp store  
 Este comando crea una nueva aplicación dentro del proyecto Django llamada store. En Django, una "aplicación" es un módulo que contiene funcionalidades específicas, como el manejo de productos o usuarios. Este comando genera la estructura básica de una aplicación para que puedas comenzar a desarrollar su funcionalidad.
 
-12) python manage.py makemigrations  
+12)python manage.py makemigrations  
 Este comando genera las migraciones necesarias para reflejar los cambios realizados en los modelos de la aplicación. Si, por ejemplo, agregas un nuevo campo a un modelo o modificas la estructura de la base de datos, debes usar este comando para generar las migraciones correspondientes.
 
-13) python manage.py migrate  
+13)python manage.py migrate  
 Este comando aplica las migraciones generadas previamente a la base de datos. Después de ejecutar makemigrations, es necesario usar migrate para asegurarte de que los cambios en el código se reflejen en la base de datos.
-
----
 
 # Diagrama MVT  
 1-Cliente envía Request: El cliente o usuario envía una Solicitud (Request) al servidor.  
 2-Django: La solicitud llega al servidor donde se está ejecutando Django.  
-3-Router Url (Enrutador de URL): Django primero pasa la solicitud a su sistema de enrutamiento de URL (**urls.py**) y este enrutador se encarga de mapear la URL solicitada a una función específica dentro del View (**Vista**). 
+3-Router Url (Enrutador de URL): Django primero pasa la solicitud a su sistema de enrutamiento de URL (urls.py) y este enrutador se encarga de mapear la URL solicitada a una función específica dentro del View (Vista). 
 4-View (Vista): Función o clase de Python que recibe la solicitud y decide qué datos necesita para satisfacer la solicitud y qué Template debe usar para presentarlos. Dos caminos posibles desde aquí:  
    Opcion 1: Si necesita datos: La View interactúa con el Model.  
    Opcion 2: Si ya tiene todos los datos: Pasa directamente al Template.  
@@ -87,25 +78,20 @@ Este comando aplica las migraciones generadas previamente a la base de datos. De
 7-Template: El Template es un archivo HTML (con código especial de Django) que define cómo se verá la página web.  
 8-Respuesta al Cliente: Convierte o combina los datos con su estructura HTML para crear la Respuesta final, es decir, una página web completa y se envía al cliente.  
 
-
----
-
 # Explicación de archivos y comandos 
+# settigs.py
+La función “settings.py” en un proyecto del framework Django, centraliza toda la configuración del proyecto que estemos realizando. Dentro de sus funcionalidades está  la conexión a la base de datos, la configuración de seguridad lo que quiere decir que las configuraciones críticas para la seguridad, como la clave secreta, protección CSRF y la configuración de cookies es gestionada por esta función.  Define aspectos del flujo de trabajo de la aplicación, como los middleware (solicitud y respuesta), la autenticación de usuarios, la gestión de sesiones, entre otras, al igual que la función se encarga de la personalización y la escalabilidad, esto permite ajustarse a nuevos entornos, como el desarrollo y producción.
 
-### settings.py
-La función **settings.py** en un proyecto del framework Django, centraliza toda la configuración del proyecto que estemos realizando. Dentro de sus funcionalidades está la conexión a la base de datos, la configuración de seguridad lo que quiere decir que las configuraciones críticas para la seguridad, como la clave secreta, protección CSRF y la configuración de cookies es gestionada por esta función. Define aspectos del flujo de trabajo de la aplicación, como los middleware (solicitud y respuesta), la autenticación de usuarios, la gestión de sesiones, entre otras, al igual que la función se encarga de la personalización y la escalabilidad, esto permite ajustarse a nuevos entornos, como el desarrollo y producción.
-
-```python
 """
 Django settings for marketplace_main project.
 
 Generated by 'django-admin startproject' using Django 5.2.7.
 
 For more information on this file, see
-[https://docs.djangoproject.com/en/5.2/topics/settings/](https://docs.djangoproject.com/en/5.2/topics/settings/)
+https://docs.djangoproject.com/en/5.2/topics/settings/
 
 For the full list of settings and their values, see
-[https://docs.djangoproject.com/en/5.2/ref/settings/](https://docs.djangoproject.com/en/5.2/ref/settings/)
+https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
@@ -114,7 +100,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
-# See [https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/](https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/)
+# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-7__w^=9l$(&lv=t4lse(s64__!fe0+gxyi&23^$w2ido6-%no2'
@@ -171,7 +157,7 @@ WSGI_APPLICATION = 'marketplace_main.wsgi.application'
 
 
 # Database
-# [https://docs.djangoproject.com/en/5.2/ref/settings/#databases](https://docs.djangoproject.com/en/5.2/ref/settings/#databases)
+# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -182,7 +168,7 @@ DATABASES = {
 
 
 # Password validation
-# [https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators](https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators)
+# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -201,7 +187,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# [https://docs.djangoproject.com/en/5.2/topics/i18n/](https://docs.djangoproject.com/en/5.2/topics/i18n/)
+# https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -213,14 +199,14 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# [https://docs.djangoproject.com/en/5.2/howto/static-files/](https://docs.djangoproject.com/en/5.2/howto/static-files/)
+# https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
  
 # Default primary key field type
-# [https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field](https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field)
+# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -234,8 +220,8 @@ Sin este archivo, el sistema no sabría cómo responder a las diferentes URLs qu
 """
 URL configuration for marketplace_main project.
 
-The urlpatterns list routes URLs to views. For more information please see:
-    [https://docs.djangoproject.com/en/5.2/topics/http/urls/](https://docs.djangoproject.com/en/5.2/topics/http/urls/)
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/5.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -374,9 +360,9 @@ def add_item(request):
 
     return render(request, 'store/form.html', context)
 
-# folder templates/store
+# foder templates/store.
 Es la carpeta que almacena todas las páginas html
-templaes\store
+ templaes\store
   <>base.html
   <>contact.html
   <>home.html
@@ -455,7 +441,7 @@ class SignupForm(UserCreationForm):
     ))
 ```
 
-Views.py (login, logout_user, detail, add_item)
+Views.py (login(), logout_user(), detail(), add_item())
 # Funciones en views.py
 ```python
 from django.shortcuts import render, get_object_or_404, redirect
@@ -557,13 +543,19 @@ from .forms import LoginForm
 urlpatterns = [
     path('contact/', contact, name='contact'),
     path('register/', register, name='register'),
-    path('login/', auth_views.LoginView.as_as_view(template_name='store/login.html', authentication_form=LoginForm)),
+    path('login/', auth_views.LoginView.as_view(template_name='store/login.html', authentication_form=LoginForm)),
     path('detail/<int:pk>/', detail, name='detail'),
 ]
 ```
 
+
+
 store/templates (item.html, login.html, signup.html, navigation.html, form.html)
-# Templates store (item.html, login.html, signup.html, navigation.html, form.html)
+# Templates templates/store login, signup
+```html
+{% extends 'store/base.html' %}
+
+
 {%block title%} {{item.name}}Registro | {%endblock%}
 
 
@@ -574,6 +566,7 @@ store/templates (item.html, login.html, signup.html, navigation.html, form.html)
 
             <h4 class="mb-6 text-center">Login</h4>
             <hr>
+            <!--Formulario de inicio de sesion-->
             <form action="." method="POST">
                 {% csrf_token %}
                 <div class="mb-3">
@@ -584,6 +577,7 @@ store/templates (item.html, login.html, signup.html, navigation.html, form.html)
                     <label class="form-label">Username:</label>
                     {{form.password}}
                 </div>
+                <!-- Captura de errores -->
                 {% if form.errors or forms.non_field_errors %}
                     <div class="mb-4 p-6 bg-danger rounded">
                         {% for fields in form%}
@@ -594,6 +588,7 @@ store/templates (item.html, login.html, signup.html, navigation.html, form.html)
                         {{ form.non_field_errors }}
                     </div>
                 {% endif %}
+                <!--Boton login y registro-->
                 <div class="d-flex justify-content-center aling-items-center">
                     <button class="btn btn-primary mb-6">Login</button>
                     </div>
@@ -606,6 +601,8 @@ store/templates (item.html, login.html, signup.html, navigation.html, form.html)
         </div>
     </div>
 {%endblock%}
+```
+```html
 {% extends 'store/base.html' %}
 
 
@@ -670,9 +667,6 @@ Formularios (forms.py): El uso de formularios personalizados como LoginForm y Si
 
 Vistas (views.py): La vista register() permite registrar nuevos usuarios, validando los datos del formulario y redirigiendo a la página de login si el registro es exitoso. Por otro lado, la vista detail() gestiona la visualización de detalles de un producto y sugiere productos relacionados. Sin embargo, sería conveniente agregar un decorador @login_required en vistas que deben estar restringidas a usuarios autenticados.
 
-Rutas (urls.py): Las rutas están bien definidas para las páginas de login, registro y detalles de productos. El uso de auth_views.LoginView permite gestionar el login de manera eficiente, pero sería ideal agregar más rutas si se implementan más vistas, como la de agregar productos.
-
-Plantillas (login.html, signup.html, etc.): Las plantillas extendiendo de base.html aseguran que el diseño sea coherente a través de las páginas. Aunque el código es sólido, se debe corregir la forma en que se muestran los errores en los formularios para una experiencia de usuario más clara.
 Rutas (urls.py): Las rutas están bien definidas para las páginas de login, registro y detalles de productos. El uso de auth_views.LoginView permite gestionar el login de manera eficiente, pero sería ideal agregar más rutas si se implementan más vistas, como la de agregar productos.
 
 Plantillas (login.html, signup.html, etc.): Las plantillas extendiendo de base.html aseguran que el diseño sea coherente a través de las páginas. Aunque el código es sólido, se debe corregir la forma en que se muestran los errores en los formularios para una experiencia de usuario más clara.
