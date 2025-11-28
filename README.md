@@ -8,7 +8,7 @@
   - [urls.py](#urlspy)
   - [models.py](#modelspy)
   - [views.py](#viewspy)
-  - [Folder templates/store](#folder-templatesstore)
+  - [Folder templates store](#folder-templates-store)
 - [Ejecución del proyecto](#ejecución-del-proyecto)
 - [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
 - [Forms.py](#forms-py)
@@ -362,7 +362,7 @@ def add_item(request):
 
     return render(request, 'store/form.html', context)
 
-# foder templates/store.
+# Folder templates store
 Es la carpeta que almacena todas las páginas html
  templaes\store
   <>base.html
