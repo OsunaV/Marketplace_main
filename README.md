@@ -1,20 +1,21 @@
-#Documentacion Primer Parcial a Tercer Parcial (27/11/25)
-#Indice
+#    Documentacion Primer Parcial a Tercer Parcial (27/11/25)
+# Índice
 - [Introducción](#introducción)
 - [Explicación de comando](#explicación-de-comando)
 - [Diagrama MVT](#diagrama-mvt)
 - [Explicación de archivos y comandos](#explicación-de-archivos-y-comandos)
-  - [settigs.py](#settigspy)
+  - [settings.py](#settingspy)
   - [urls.py](#urlspy)
   - [models.py](#modelspy)
   - [views.py](#viewspy)
-  - [foder templates/store](#foder-templatesstore)
-- [Ejecucion del proyecto](#ejecucion-del-proyecto)
-- [Actualizaciones Del Tercera Parcial](#actualizaciones-del-tercera-parcial)
-- [Forms.py](#formspy-loginform-signupform-newitemform)
-- [Views.py](#viewspy-login-logout_user-detail-add_item)
-- [Templates store](#storetemplates-itemhtml-loginhtml-signuphtml-navigationhtml-formhtml)
+  - [Folder templates/store](#folder-templatesstore)
+- [Ejecución del proyecto](#ejecución-del-proyecto)
+- [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
+- [Forms.py](#forms-py)
+- [Views.py](#views-py)
+- [Templates store](#templates-store)
 - [Conclusión](#conclusión)
+
   
 # Introducción
 
@@ -377,7 +378,7 @@ Capturas del "Django administraction para crear las tablas/apartados
 
 # Actualizaciones Del Tercera Parcial 
 Forms.py (LoginForm, SignupForm, NewItemForm)
-# SignUp y Login en Forms.py
+#Forms.py
 ```python
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -443,7 +444,7 @@ class SignupForm(UserCreationForm):
 ```
 
 Views.py (login(), logout_user(), detail(), add_item())
-# Funciones en views.py
+#Views.py
 ```python
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import logout
@@ -552,7 +553,7 @@ urlpatterns = [
 
 
 store/templates (item.html, login.html, signup.html, navigation.html, form.html)
-# Templates templates/store login, signup
+#Templates store
 ```html
 {% extends 'store/base.html' %}
 
