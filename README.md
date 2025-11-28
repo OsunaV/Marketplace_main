@@ -1,35 +1,41 @@
 #Documentacion Del Primer Parcial A Tercer Parcial (27/11/25)
 # Índice
 
-1. [Introducción](#introducción)
-2. [Explicación de comando](#explicación-de-comando)
-    1. [venv\Scripts\activate](#venvscriptsactivate)
-    2. [pip install django](#pip-install-django)
-    3. [django-admin startproject marketplace_main](#django-admin-startproject-marketplace_main)
-    4. [python -m venv venv](#python---m-venv-venv)
-    5. [pip list](#pip-list)
-    6. [dir](#dir)
-    7. [python manage.py runserver](#python-managepy-runserver)
-    8. [code .](#code-)
-    9. [python manage.py createsuperuser](#python-managepy-createsuperuser)
-    10. [python manage.py migrate](#python-managepy-migrate)
-    11. [python manage.py startapp store](#python-managepy-startapp-store)
-    12. [python manage.py makemigrations](#python-managepy-makemigrations)
-    13. [python manage.py migrate (segunda vez)](#python-managepy-migrate-segunda-vez)
-3. [Diagrama MVT](#diagrama-mvt)
-4. [Explicación de archivos y comandos](#explicación-de-archivos-y-comandos)
-    1. [settings.py](#settingspy)
-    2. [urls.py](#urlspy)
-    3. [models.py](#modelspy)
-    4. [views.py](#viewspy)
-    5. [Folder templates/store](#folder-templatesstore)
-5. [Ejecución del proyecto](#ejecución-del-proyecto)
-6. [Actualizaciones del Tercera Parcial](#actualizaciones-del-tercera-parcial)
-    1. [SignUp y Login en Forms.py](#signup-y-login-en-formspy)
-    2. [Funciones en views.py](#funciones-en-viewspy)
-7. [Login, Register urls.py](#login-register-urlspy)
-8. [store/templates (item.html, login.html, signup.html, navigation.html, form.html)](#storetemplates-itemhtml-loginhtml-signuphtml-navigationhtml-formhtml)
-9. [Conclusión](#conclusión)
+## Explicación de comando
+- venv\Scripts\activate
+- pip install django
+- django-admin startproject marketplace_main
+- python -m venv venv
+- pip list
+- dir
+- python manage.py runserver
+- code .
+- python manage.py createsuperuser
+- python manage.py migrate
+- python manage.py startapp store
+- python manage.py makemigrations
+- python manage.py migrate (segunda vez)
+
+## Explicación de archivos y comandos
+- settings.py
+- urls.py
+- models.py
+- views.py
+- Folder templates/store
+
+## Actualizaciones del Tercera Parcial
+- SignUp y Login en Forms.py
+- Funciones en views.py
+
+## Login, Register urls.py
+- Rutas de Login y Registro
+
+## store/templates (item.html, login.html, signup.html, navigation.html, form.html)
+- login.html
+- signup.html
+- item.html
+- navigation.html
+- form.html
 
 
 # Introducción
