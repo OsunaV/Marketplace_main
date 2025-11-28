@@ -81,7 +81,7 @@ Este comando aplica las migraciones generadas previamente a la base de datos. De
 8-Respuesta al Cliente: Convierte o combina los datos con su estructura HTML para crear la Respuesta final, es decir, una página web completa y se envía al cliente.  
 
 # Explicación de archivos y comandos 
-# settigs.py
+#settings.py
 La función “settings.py” en un proyecto del framework Django, centraliza toda la configuración del proyecto que estemos realizando. Dentro de sus funcionalidades está  la conexión a la base de datos, la configuración de seguridad lo que quiere decir que las configuraciones críticas para la seguridad, como la clave secreta, protección CSRF y la configuración de cookies es gestionada por esta función.  Define aspectos del flujo de trabajo de la aplicación, como los middleware (solicitud y respuesta), la autenticación de usuarios, la gestión de sesiones, entre otras, al igual que la función se encarga de la personalización y la escalabilidad, esto permite ajustarse a nuevos entornos, como el desarrollo y producción.
 
 """
