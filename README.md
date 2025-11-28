@@ -1,7 +1,7 @@
 #Documentacion Del Primer Parcial A Tercer Parcial (27/11/25)
 # Índice
 - [Introducción](#introducción)
-- [Explicación de comando](#explicación-de-comando)
+- [Explicación de comandos](#explicación-de-comandos)
 - [Diagrama MVT](#diagrama-mvt)
 - [Explicación de archivos y comandos](#explicación-de-archivos-y-comandos)
   - [settings.py](#settingspy)
@@ -11,11 +11,9 @@
   - [Folder templates/store](#folder-templatesstore)
 - [Ejecución del proyecto](#ejecución-del-proyecto)
 - [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
-- [Forms.py](#forms-py)
-- [Views.py](#views-py)
-- [Templates store](#templates-store)
+  - [Forms.py](#forms-py)
+  - [Views.py](#views-py)
 - [Conclusión](#conclusión)
-
   
 # Introducción
 
