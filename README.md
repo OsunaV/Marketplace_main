@@ -11,7 +11,7 @@
   - [Folder templates store](#folder-templates-store)
 - [Ejecución del proyecto](#ejecución-del-proyecto)
 - [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
-- [Forms.py](#forms-py)
+- [Forms.py](#formspy)
 - [Views.py](#views-py)
 - [Templates store](#templates-store)
 - [Conclusión](#conclusión)
