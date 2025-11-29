@@ -12,7 +12,7 @@
 - [Ejecución del proyecto](#ejecución-del-proyecto)
 - [Actualizaciones del Tercer Parcial](#actualizaciones-del-tercer-parcial)
 - [Forms.py](#formspy)
-- [Views.py](#views-py)
+- [Views.py](#viewspy)
 - [Templates store](#templates-store)
 - [Conclusión](#conclusión)
 
@@ -553,7 +553,7 @@ urlpatterns = [
 
 
 store/templates (item.html, login.html, signup.html, navigation.html, form.html)
-# Templates templates/store login, signup
+# Templates store
 ```html
 {% extends 'store/base.html' %}
 
