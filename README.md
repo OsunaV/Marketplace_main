@@ -444,7 +444,7 @@ class SignupForm(UserCreationForm):
 ```
 
 Views.py (login(), logout_user(), detail(), add_item())
-# Funciones en views.py
+# Views.py
 ```python
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import logout
@@ -513,7 +513,7 @@ def register(request):
 
 
 Explicar decorador @login_required
-# Login, Register urls.py
+# Urls.py
 ```python
 from django.urls import path
 from django.contrib.auth import views as auth_views
@@ -532,7 +532,7 @@ urlpatterns = [
 ```
 
 Urls.py (Las rutas a cada acción nueva en views)
-# Login, Register urls.py
+# Login
 ```python
 from django.urls import path
 from django.contrib.auth import views as auth_views
