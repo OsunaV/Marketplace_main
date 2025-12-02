@@ -379,7 +379,7 @@ Es la carpeta que almacena todas las páginas html
 ![Captura del proyecto](./Imagenes/IMG9.png)
 ![Captura del proyecto](./Imagenes/IMG10.png)
 ![Captura del proyecto](./Imagenes/IMG11.png)
-![Captura del proyecto](./Imagenes/IMG12.png)
+
 
 # Actualizaciones del Tercer Parcial
 Forms.py (LoginForm, SignupForm, NewItemForm)
