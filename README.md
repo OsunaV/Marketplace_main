@@ -79,6 +79,7 @@ Este comando aplica las migraciones generadas previamente a la base de datos. De
 6-Base de Datos: La Model se comunica con la Base de Datos para interactuar con la base de datos, al completar la operación la función de Model devuelve los datos a la función View.  
 7-Template: El Template es un archivo HTML (con código especial de Django) que define cómo se verá la página web.  
 8-Respuesta al Cliente: Convierte o combina los datos con su estructura HTML para crear la Respuesta final, es decir, una página web completa y se envía al cliente.  
+![Diagrama](./Imagenes/IMGDia.png)
 
 # Explicación de archivos y comandos 
 # settings.py
@@ -364,17 +365,21 @@ def add_item(request):
 
 # Folder templates store
 Es la carpeta que almacena todas las páginas html
- templaes\store
-  <>base.html
-  <>contact.html
-  <>home.html
-  <>item.html
-  <>navegation.html
+![Captura de la carpeta store](./Imagenes/IMG12.png)
 
 # Ejecución del proyecto
-Se muestran los items de la pagina web
-Tambien se muestra la parte del "Contactanos"
-Capturas del "Django administraction para crear las tablas/apartados
+![Captura del proyecto](./Imagenes/IMG1.png)
+![Captura del proyecto](./Imagenes/IMG2.png)
+![Captura del proyecto](./Imagenes/IMG3.png)
+![Captura del proyecto](./Imagenes/IMG4.png)
+![Captura del proyecto](./Imagenes/IMG5.png)
+![Captura del proyecto](./Imagenes/IMG6.png)
+![Captura del proyecto](./Imagenes/IMG7.png)
+![Captura del proyecto](./Imagenes/IMG8.png)
+![Captura del proyecto](./Imagenes/IMG9.png)
+![Captura del proyecto](./Imagenes/IMG10.png)
+![Captura del proyecto](./Imagenes/IMG11.png)
+![Captura del proyecto](./Imagenes/IMG12.png)
 
 # Actualizaciones del Tercer Parcial
 Forms.py (LoginForm, SignupForm, NewItemForm)
